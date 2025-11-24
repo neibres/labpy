@@ -20,6 +20,7 @@ def menu():
         print("1. Add todo")
         print("2. Print todos")
         print("3. Complete todo")
+        print("4. Count incomplete items")
         print("10. Exit")
         choice = input("Enter your choice: ")
         if choice == "1":
@@ -42,6 +43,12 @@ def menu():
             index = int(input("Enter index: "))
             #todo_list.complete_item(index)
             command = f"3-{index}"
+            result = send_command(command)
+            print(result)
+
+        elif choice == "4":
+            print("Count incomplete items")
+            command = f"4-"
             result = send_command(command)
             print(result)
 

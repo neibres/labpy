@@ -26,6 +26,13 @@ class TodoList:
     def count_items(self):
         return len(self.items)
 
+    def count_incomplete_items(self):
+        count = 0
+        for item in self.items:
+            if not item.completed:
+                count += 1
+        return count
+
     def display_items(self):
         result = ""
         for i, item in enumerate(self.items):
@@ -65,6 +72,9 @@ while True:
         index = int(data)
         todo_list.complete_item(index)
         result = "Todo completed."
+    elif choice == "4":
+        count = todo_list.count_incomplete_items()
+        result = f"Incomplete items: {count}"
     else:
         result = "Invalid command."
     print("Logging: " + result)

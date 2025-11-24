@@ -19,4 +19,4 @@ def join_binary_files(file1, file2, output_file):
 
 #copy_binary_file('c-academy.bmp', 'head', 0, 54)
 #copy_binary_file('c-academy.bmp', 'body', 54)
-join_binary_files('head', 'body', 'c-academy-original.bmp')
+join_binary_files('head', 'body_cbc_decode', 'c-academy-original_cbc_decode.bmp')

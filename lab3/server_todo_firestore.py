@@ -6,7 +6,7 @@ import socket
 
 class TodoList:
     def __init__(self):
-        cred = credentials.Certificate("... TODO: Change this to your own Firebase Admin SDK JSON file ...")
+        cred = credentials.Certificate("lab3-parte2-ca791-firebase-adminsdk-fbsvc-324b8960c3.json")
         firebase_admin.initialize_app(cred)
         self.db = firestore.client()
 
